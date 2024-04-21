@@ -29,6 +29,19 @@ git clone https://github.com/quannhm/git-example.git
 cd git-example
 ```
 
+>You will need generate Personal Access Token (PAT)
+https://github.com/settings/tokens
+
+Use token as password when logging in
+
+- Give it access to Contents for Commits
+
+## SSH
+```ssh
+git clone git@github.com:quannhm/git-example.git
+cd git-example
+```
+
 ## Commits
 Commit code which will open edit msg the editor of choice
 ```sh
