@@ -42,6 +42,30 @@ git clone git@github.com:quannhm/git-example.git
 cd git-example
 ```
 
+We need create SSH ras key pair
+```sh
+sshe-keygen -t rsa
+```
+
+For WSL users and if you create non default key, add
+```sh
+eval `ssh-agent`
+ssh-add /home/andrew/.ssh/alt-github_id_rsa
+```
+
+Test connection
+```
+ssh -T git@github.com
+```
+
+## SSH
+They instruct in Ubuntu so I skip this
+
+```
+gh auth login
+gh repo clone mquanng/git-example
+```
+
 ## Commits
 Commit code which will open edit msg the editor of choice
 ```sh
@@ -58,12 +82,50 @@ git commit -m "add this"
 ```
 
 ## Branches
+List branches
+```
+git branch
+```
+
+Create new by
+```
+git branch name
+```
+
+Checkout branch
+```
+git checkout name
+```
 
 ## Remotes
+We can add remote usually via upstream when add branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
 
 ## Stashing
+Want to hold on/hide changes until you come back
+```
+# Hide
+git stash
+git stash save my-name
+
+# Show
+git stash list
+
+# Load
+git stash apply
+git stash pop
+```
 
 ## Merging
+change to your new branch then merge
+```
+git checkout dev
+git merge main
+```
 
 ## Add
 Stage change what included when commit, use . to add all
