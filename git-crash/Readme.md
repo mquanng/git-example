@@ -98,10 +98,34 @@ git checkout name
 ```
 
 ## Remotes
+We can add remote usually via upstream when add branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
 
 ## Stashing
+Want to hold on/hide changes until you come back
+```
+# Hide
+git stash
+git stash save my-name
+
+# Show
+git stash list
+
+# Load
+git stash apply
+git stash pop
+```
 
 ## Merging
+change to your new branch then merge
+```
+git checkout dev
+git merge main
+```
 
 ## Add
 Stage change what included when commit, use . to add all
