@@ -42,6 +42,30 @@ git clone git@github.com:quannhm/git-example.git
 cd git-example
 ```
 
+We need create SSH ras key pair
+```sh
+sshe-keygen -t rsa
+```
+
+For WSL users and if you create non default key, add
+```sh
+eval `ssh-agent`
+ssh-add /home/andrew/.ssh/alt-github_id_rsa
+```
+
+Test connection
+```
+ssh -T git@github.com
+```
+
+## SSH
+They instruct in Ubuntu so I skip this
+
+```
+gh auth login
+gh repo clone mquanng/git-example
+```
+
 ## Commits
 Commit code which will open edit msg the editor of choice
 ```sh
@@ -58,6 +82,20 @@ git commit -m "add this"
 ```
 
 ## Branches
+List branches
+```
+git branch
+```
+
+Create new by
+```
+git branch name
+```
+
+Checkout branch
+```
+git checkout name
+```
 
 ## Remotes
 
